@@ -1,0 +1,33 @@
+REM TITLE: Phantom Command Prompt Flood
+
+REM AUTHOR: Bryan
+
+REM DESCRIPTION: Opens multiple Command Prompt windows with cryptic messages.
+
+ 
+
+DELAY 1000
+
+VAR $count = 10
+
+WHILE ($count > 0)
+
+    GUI r
+
+    DELAY 500
+
+    STRING cmd
+
+    ENTER
+
+    DELAY 500
+
+    STRING echo Scanning system... && timeout /t 3 && echo Initiating process... && timeout /t 3
+
+    ENTER
+
+    DELAY 500
+    
+    $count = ($count - 1)
+
+END_WHILE

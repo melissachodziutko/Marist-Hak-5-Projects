@@ -1,0 +1,10 @@
+REM Title: Wipe the Desktop
+REM Author: Chase
+REM Description: This script will run for as long as the Ducky is plugged in, closing every open program with Alt F4
+
+WHILE TRUE
+    ALT F4
+    ALT TAB
+END_WHILE
+
+

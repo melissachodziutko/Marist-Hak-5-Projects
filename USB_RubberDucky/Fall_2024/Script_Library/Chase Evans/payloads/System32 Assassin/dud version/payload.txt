@@ -1,0 +1,44 @@
+REM TITLE System32 Assassin
+REM AUTHOR Chase
+REM DESCRIPTION *WARNING*: This will f**k up your entire computer
+
+FUNCTION OPEN_CMD_LINE_ADMIN()
+    REM Open windows run window and preps the cmd line
+    DELAY 300
+    GUI r
+    DELAY 300
+    STRING cmd
+    DELAY 300
+    
+    REM Starts CMD Line in Admin mode
+    CTRL SHIFT ENTER
+    DELAY 1000
+    LEFTARROW
+    ENTER
+END_FUNCTION
+
+
+ATTACKMODE HID STORAGE
+
+DELAY 300
+GUI r
+DELAY 300
+STRING notepad
+ENTER
+DELAY 300
+
+LED_RED
+STRINGLN |<<<<<<<<<<<<<<< WARNING >>>>>>>>>>>>>>>| 
+STRINGLN You are about to launch a payload that *WILL* kill your pc
+STRINGLN ONLY PROCEED if this is a sandbox computer
+STRINGLN CLICK THE INTERNAL BUTTON TO DELIVER PAYLOAD.....
+
+
+WAIT_FOR_BUTTON_PRESS
+LED_GREEN
+OPEN_CMD_LINE_ADMIN()
+DELAY 1000
+STRING (THIS IS PLACEHOLDER TEXT) System32 Deleted....
+
+
+

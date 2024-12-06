@@ -1,0 +1,12 @@
+REM RickRoll
+REM AUTHOR Chase
+REM A Timeless Classic
+
+ATTACKMODE HID STORAGE
+
+DELAY 1000
+GUI r
+DELAY 200
+STRINGLN cmd
+DELAY 300
+STRINGLN start D:\hangar_bay\hello.mp4

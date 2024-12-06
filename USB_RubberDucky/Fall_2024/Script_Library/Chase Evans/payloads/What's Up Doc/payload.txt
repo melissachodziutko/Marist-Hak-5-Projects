@@ -1,0 +1,44 @@
+REM Title Whats Up Doc?
+REM Author Chase
+
+FUNCTION DisplayChosenArt()
+    STRINGLN
+                                    /|         ,
+                                  ,///        /|
+                                 // //     ,///
+                                // //     // //
+                               // //     || ||
+                               || ||    // //
+                               || ||   // //
+                               || ||  // //
+                               || || || ||
+                               \\,\|,|\_//
+                                \\)\)\\|/
+                                )-."" .-(
+                               //^\` `/^\\
+                              //  |   |  \\
+                            ,/_| 0| _ | 0|_\,
+                          /`    `"=.v.="`    `\
+                         /`    _."{_,_}"._    `\
+                         `/`  ` \  |||  / `  `\`
+                          `",_  \\=^~^=//  _,"`
+                              "=,\'-=-'/,="
+                                  '---'
+                           EH, WHAT'S UP DOC?
+    END_STRINGLN
+END_FUNCTION
+
+
+ATTACKMODE HID STORAGE
+
+DELAY 200
+GUI r
+DELAY 200
+STRING notepad
+ENTER
+
+DELAY 500
+GUI UPARROW
+DELAY 100
+
+DisplayChosenArt()

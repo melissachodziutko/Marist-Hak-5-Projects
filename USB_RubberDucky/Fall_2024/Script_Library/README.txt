@@ -1,0 +1,1 @@
+Descriptions of Scripts, their functionailty and other details found in documentation under Customs Script Library section

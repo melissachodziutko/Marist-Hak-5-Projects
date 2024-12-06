@@ -1,0 +1,68 @@
+REM TITLE: Mass Application Launcher (Endless)
+
+REM AUTHOR: Bryan
+
+REM DESCRIPTION: Opens multiple instances of common applications endlessly.
+
+
+DELAY 1000
+
+VAR $IsActive = TRUE
+
+WHILE $IsActive
+
+    GUI r
+
+    DELAY 500
+
+    STRING notepad
+
+    ENTER
+
+    DELAY 200
+
+    GUI r
+
+    DELAY 500
+
+    STRING calc
+
+    ENTER
+
+    DELAY 200
+
+    GUI r
+
+    DELAY 500
+
+    STRING mspaint
+
+    ENTER
+
+    DELAY 200
+
+    GUI r
+
+    DELAY 500
+
+    STRING cmd
+
+    ENTER
+
+    DELAY 200
+
+    GUI r
+
+
+    DELAY 500
+
+    STRING msedge
+
+    ENTER
+
+    DELAY 200
+
+END_WHILE
+
+WAIT_FOR_BUTTON_PRESS
+$IsActive = FALSE

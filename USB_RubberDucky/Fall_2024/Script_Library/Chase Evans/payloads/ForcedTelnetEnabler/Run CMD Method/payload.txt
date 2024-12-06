@@ -1,0 +1,37 @@
+REM TITLE Connect to Telehack.com
+REM AUTHOR Chase
+REM DESCRIPTION Connects pc to Telehack.com via cmd
+
+DEFINE ENABLE_TELNET STRING dism /online /Enable-Feature /FeatureName:TelnetClient
+
+
+FUNCTION OPEN_CMD_LINE_ADMIN()
+    REM Open windows run window and preps the cmd line
+    DELAY 300
+    GUI r
+    DELAY 300
+    STRING cmd
+    DELAY 300
+    
+    REM Starts CMD Line in Admin mode
+    CTRL SHIFT ENTER
+    DELAY 1000
+    LEFTARROW
+    ENTER
+END_FUNCTION
+
+
+ATTACKMODE HID STORAGE
+
+WAIT_FOR_BUTTON_PRESS
+
+OPEN_CMD_LINE_ADMIN()
+
+DELAY 500
+ENABLE_TELNET
+DELAY 1000
+ENTER
+
+STRINGLN telnet
+STRINGLN o
+STRINGLN telehack.com
